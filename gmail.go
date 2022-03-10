@@ -22,7 +22,7 @@ type Email struct {
 	Attachments   map[string][]byte
 }
 
-type EmailsConfs struct {
+type EmailService struct {
 	Auth  *smtp.Client
 	Email *Email
 }
