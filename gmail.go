@@ -60,15 +60,15 @@ func (e *Email) Auth() (*smtp.Client, error) {
 		"",
 		e.From,
 		e.Password,
-		"smtp.gmail.com",
+		"smtp.elasticemail.com",
 	)
 
-	conn, err := smtp.Dial("smtp.gmail.com:587")
+	conn, err := smtp.Dial("smtp.elasticemail.com:2525")
 	if err != nil {
 		return nil, err
 	}
 
-	err = conn.StartTLS(&tls.Config{ServerName: "smtp.gmail.com"})
+	err = conn.StartTLS(&tls.Config{ServerName: "smtp.elasticemail.com"})
 	if err != nil {
 		return nil, err
 	}
