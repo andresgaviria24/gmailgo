@@ -63,7 +63,7 @@ func (e *Email) Auth() (*smtp.Client, error) {
 		"smtp.elasticemail.com",
 	)
 
-	conn, err := smtp.Dial("smtp.elasticemail.com:2525")
+	conn, err := smtp.Dial("smtp.elasticemail.com:587")
 	if err != nil {
 		return nil, err
 	}
